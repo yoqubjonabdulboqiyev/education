@@ -40,7 +40,7 @@ const update = async (req, res, next) => {
             res.status(404).json({ error: "Teacher not found" });
         }
         const teacher = await Teachers.update({ _id: id }, { fullName: fullName, phoneNumber: phoneNumber, photoUrl: photoUrl, derectionId: derectionId });
-        res.status(201).json(teacher);
+        res.status(201).json({ teacher });
     } catch (error) {
         next(error);
     }
@@ -79,7 +79,7 @@ const getById = async (req, res, next) => {
             // throw new CustomError(404, "Teacher not found");
             res.status(404).json({ error: "Teacher not found" });
         }
-        res.status(201).json({findTeacher});
+        res.status(201).json({ findTeacher });
     } catch (error) {
         next(error);
     }
@@ -126,7 +126,7 @@ const getAll = async (req, res, next) => {
                 }
             ]
         );
-        res.status(201).json({findTeacher});
+        res.status(201).json({ findTeacher });
     } catch (error) {
         next(error);
     }

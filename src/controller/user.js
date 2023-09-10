@@ -115,7 +115,7 @@ const getAll = async (req, res, next) => {
                 photoUrl: 1
             }
         });
-        res.status(201).json(findUser);
+        res.status(201).json({findUser});
     } catch (error) {
         next(error);
     }
