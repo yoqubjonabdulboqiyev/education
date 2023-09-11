@@ -1,3 +1,4 @@
+const { model } = require("mongoose");
 const { Schema } = require("mongoose");
 
 const schema = new Schema({
@@ -23,6 +24,6 @@ const schema = new Schema({
     }
 });
 
-const Teacher = mongoose.model('Teacher', schema);
+const Teacher = model('Teacher', schema);
 
 module.exports = Teacher;

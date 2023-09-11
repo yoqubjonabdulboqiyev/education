@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const schema = new Schema({
     groupId: {
@@ -17,6 +17,6 @@ const schema = new Schema({
     }
 });
 
-const Attendance = mongoose.model('Attendance', schema);
+const Attendance = model('Attendance', schema);
 
 module.exports = Attendance;

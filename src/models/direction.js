@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
 const schema = new Schema({
     name: {
@@ -8,5 +8,5 @@ const schema = new Schema({
     }
 })
 
-const Direction = mongoose.model("direction", schema);
+const Direction = model("direction", schema);
 module.exports = Direction;

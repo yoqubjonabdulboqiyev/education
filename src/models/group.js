@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const schema = new Schema({
    
@@ -24,6 +24,6 @@ const schema = new Schema({
     }
 });
 
-const Group = mongoose.model('Group', schema);
+const Group = model('Group', schema);
 
 module.exports = Group;
